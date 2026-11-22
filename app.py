@@ -23,7 +23,7 @@ def generate_story(topic, genre, audience, length, language, characters, moral, 
     api_key = setting('GROQ_API_KEY')
     if not api_key:
         raise ValueError('GROQ_API_KEY is missing. Add it to Streamlit Cloud Secrets.')
-    model = setting('GROQ_MODEL', 'llama-3.1-8b-instant')
+    model = setting('GROQ_MODEL', 'qwen/qwen3.8-27b')
     word_limits = {'Short': '200–300', 'Medium': '500–700', 'Long': '900–1200'}
     system = ('You are a talented creative storyteller. Write original, engaging, age-appropriate '
               'stories with a compelling title, a clear beginning, character development, conflict, '
